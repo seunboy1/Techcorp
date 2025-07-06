@@ -53,4 +53,9 @@ clean:
 
 # Remove Poetry virtual environment
 clean-venv:
-	poetry env remove $$(poetry env list --full-path | head -n 1)
+	@if [ -d .venv ]; then \
+		rm -rf .venv; \
+		echo "Removed .venv directory"; \
+	else \
+		poetry env remove --all 2>/dev/null || echo "No virtual environment to remove"; \
+	fi
