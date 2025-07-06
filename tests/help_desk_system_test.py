@@ -42,7 +42,7 @@ def test_process_request_normal():
 
 
 def test_process_request_error():
-    """Test request processing when classifier raises an exceptions."""
+    """Test request processing when classifier raises an exception."""
     system = IntelligentHelpDeskSystem()
     request = HelpDeskRequest(user_message="reset my password")
     with patch.object(system, "classifier") as mock_classifier:

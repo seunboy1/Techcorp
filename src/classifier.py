@@ -55,7 +55,7 @@ class RequestClassifier:
             escalation_required = classification_data.get("escalate", False)
             escalation_reason = classification_data.get("escalation_reason", None)
 
-            # Check confidence threshold and escalate if too low
+            # Check confidence threshold and escalates if too low
             confidence = classification_data.get("confidence", 0.5)
             if confidence < Config.CLASSIFICATION_CONFIDENCE_THRESHOLD:
                 escalation_required = True
