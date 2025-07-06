@@ -14,6 +14,7 @@ from pydantic import BaseModel
 from .models import HelpDeskRequest, HelpDeskResponse, SystemHealth
 from .help_desk_system import IntelligentHelpDeskSystem
 
+
 # Initialize FastAPI app
 app = FastAPI(
     title="Intelligent Help Desk System API",
