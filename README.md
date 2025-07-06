@@ -140,9 +140,19 @@ This project implements an intelligent help desk system that uses AI to classify
 
 Create a `.env` file in the `src/` directory with:
 ```
+# Get your API key from https://platform.openai.com/api-keys
 OPENAI_API_KEY=your-openai-api-key-here
 OPENAI_MODEL=gpt-3.5-turbo
 OPENAI_EMBEDDING_MODEL=text-embedding-ada-002
+
+# Optional: Override default settings
+VECTOR_DIMENSION=1536
+SIMILARITY_THRESHOLD=0.7
+CLASSIFICATION_CONFIDENCE_THRESHOLD=0.8
+MAX_RESPONSE_LENGTH=500
+MAX_RETRIEVAL_RESULTS=3 
+KNOWLEDGE_BASE_DIR=knowledge_base
+DOCS=docs
 ```
 
 ## Live URL
