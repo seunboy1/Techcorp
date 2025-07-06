@@ -70,6 +70,8 @@ ignore-paths = [
     "^build/.*$",
     "^dist/.*$"
 ]
+# Add this to disable checking .venv completely
+ignore = [".venv", "venv", "__pycache__"]
 
 [tool.coverage.run]
 branch = true
