@@ -5,6 +5,7 @@ This module provides functionality to generate contextual responses using
 OpenAI's LLM API combined with retrieved knowledge base information to
 create comprehensive and helpful IT support responses.
 """
+
 import json
 from typing import List
 import openai
@@ -95,8 +96,8 @@ class ResponseGenerator:
             with open(Config.CATEGORIES_PATH, "r", encoding="utf-8") as f:
                 categories = json.load(f)["categories"]
                 cat_info = categories.get(classification.category.value, {})
-                description = cat_info.get('description', 'N/A')
-                resolution_time = cat_info.get('typical_resolution_time', 'N/A')
+                description = cat_info.get("description", "N/A")
+                resolution_time = cat_info.get("typical_resolution_time", "N/A")
                 category_info = (
                     f"Description: {description}\n"
                     f"Typical Resolution Time: {resolution_time}"

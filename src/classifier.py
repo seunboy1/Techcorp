@@ -4,6 +4,7 @@ Request classifier module for intelligent help desk system.
 This module provides classification functionality for incoming help desk requests
 using OpenAI's LLM API to categorize requests and determine escalation requirements.
 """
+
 import json
 from typing import Dict, Any
 import openai
@@ -51,7 +52,6 @@ class RequestClassifier:
             classification_data = self._parse_classification_response(
                 classification_text
             )
-
             escalation_required = classification_data.get("escalate", False)
             escalation_reason = classification_data.get("escalation_reason", None)
 

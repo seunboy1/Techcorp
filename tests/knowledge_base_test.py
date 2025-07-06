@@ -1,5 +1,5 @@
 """
-Unit tests for src.knowledge_base.KnowledgeBaseManager covering 
+Unit tests for src.knowledge_base.KnowledgeBaseManager covering
 category mapping, loading, searching, and edge cases.
 """
 

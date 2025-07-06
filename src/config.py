@@ -1,4 +1,5 @@
 """Configuration settings for the Intelligent Help Desk System"""
+
 import os
 from dotenv import load_dotenv
 

@@ -5,6 +5,7 @@ This module defines all the Pydantic models and enums used throughout
 the intelligent help desk system, including request/response models,
 classification results, knowledge base items, and system health models.
 """
+
 from enum import Enum
 from typing import List, Optional, Dict
 from pydantic import BaseModel, Field

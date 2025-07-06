@@ -24,8 +24,10 @@ local:
 
 # Run tests and coverage using pytest
 test:
-	dotenv -f src/.env run -- poetry run coverage run -m pytest -v
-	dotenv -f src/.env run -- poetry run coverage report -m
+	poetry run coverage run -m pytest -v
+	poetry run coverage report -m
+	# dotenv -f src/.env run -- poetry run coverage run -m pytest -v
+	# dotenv -f src/.env run -- poetry run coverage report -m
 
 # Run code formatter using black
 format:
@@ -51,4 +53,4 @@ clean:
 
 # Remove Poetry virtual environment
 clean-venv:
-	poetry env remove $$(poetry env list --full-path | head -n 1) 
+	poetry env remove $$(poetry env list --full-path | head -n 1)

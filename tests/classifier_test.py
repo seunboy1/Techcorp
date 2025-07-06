@@ -1,8 +1,10 @@
 """Unit tests for src.classifier.RequestClassifier covering all logic branches."""
 
 import json
-from unittest.mock import patch, mock_open
+from unittest.mock import mock_open, patch
+
 import pytest
+
 from src.classifier import RequestClassifier
 from src.models import ClassificationResult, RequestCategory
 
@@ -115,7 +117,7 @@ def test_classify_request_llm_error(classifier_fixture):
 
 def test_create_classification_prompt(classifier_fixture):
     """Test prompt creation includes user message and category."""
-    prompt = classifier_fixture._create_classification_prompt("reset my password")
+    prompt = classifier_fixture.create_classification_prompt("reset my password")
     assert "reset my password" in prompt
     assert "password_reset" in prompt
 

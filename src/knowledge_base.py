@@ -1,4 +1,5 @@
 """Manages the knowledge base for intelligent help desk system"""
+
 import os
 import json
 import re
@@ -174,8 +175,8 @@ class KnowledgeBaseManager:
 
             # Add common issues and solutions
             for issue in guide["common_issues"]:
-                issue_text = issue['issue']
-                solution_text = issue['solution']
+                issue_text = issue["issue"]
+                solution_text = issue["solution"]
                 content = (
                     f"Common issue with {software}: {issue_text} - "
                     f"Solution: {solution_text}"
