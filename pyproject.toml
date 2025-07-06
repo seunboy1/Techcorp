@@ -21,7 +21,6 @@ fastapi = "^0.104.1"            # For building the API service
 faiss-cpu = "^1.11.0"           # Efficient similarity search for knowledge retrieval
 python-dotenv = "^1.1.1"
 
-
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"              # Code formatting
 flake8 = "^6.0.0"              # Linting
@@ -59,7 +58,15 @@ disable= [
 ]
 
 [tool.pylint.MASTER]
-ignore-paths = '^Monitoring/.ipynb_checkpoints/.*$|^venv/.*$'
+ignore-paths = [
+    '^Monitoring/.ipynb_checkpoints/.*$',
+    '^venv/.*$',
+    '^\.venv/.*$',
+    '^\.venv/lib/.*$',
+    '^node_modules/.*$',
+    '^build/.*$',
+    '^dist/.*$'
+]
 
 [tool.coverage.run]
 branch = true
