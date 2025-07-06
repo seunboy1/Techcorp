@@ -44,10 +44,12 @@ addopts = "--verbose"
 [tool.pylint.messages_control]
 disable= [
         "bare-except",
+        "invalid-name",
         "import-error",
         "duplicate-code",
         "no-else-return",
         "protected-access",
+        "no-name-in-module",
         "too-many-statements",
         "redefined-outer-name",
         "broad-exception-caught",
@@ -61,6 +63,7 @@ disable= [
 ignore-paths = [
     '^Monitoring/.ipynb_checkpoints/.*$',
     '^venv/.*$',
+    '^tests/.*$',
     '^\.venv/.*$',
     '^\.venv/lib/.*$',
     '^node_modules/.*$',
