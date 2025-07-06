@@ -47,7 +47,7 @@ This project implements an intelligent help desk system that uses AI to classify
         make install
     ```
 
-- Perform code formatting 
+- Perform code formatting
     ```bash
         make format
     ```
@@ -73,6 +73,11 @@ This project implements an intelligent help desk system that uses AI to classify
 
 ### Pre-commit setup and basic command
 #### Following various software best concepts and practices such as testing, code coverage, linting, code formatting.
+
+-  Install pre-commit
+   ```bash
+      pip install pre-commit
+   ```
 
 -  Run against all the files
    ```bash
@@ -150,11 +155,11 @@ VECTOR_DIMENSION=1536
 SIMILARITY_THRESHOLD=0.7
 CLASSIFICATION_CONFIDENCE_THRESHOLD=0.8
 MAX_RESPONSE_LENGTH=500
-MAX_RETRIEVAL_RESULTS=3 
+MAX_RETRIEVAL_RESULTS=3
 KNOWLEDGE_BASE_DIR=knowledge_base
 DOCS=docs
 ```
 
 ## Live URL
 
-[API Documentation](http://localhost:8000/docs) - Available when running locally 
+[API Documentation](http://localhost:8000/docs) - Available when running locally
